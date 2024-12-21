@@ -59,7 +59,6 @@ const result = await request.query(sqlQuery);
 connection.close();
 
 // Retrieve the newly created book using its ID
-//asdasdasdasd
 return this.getBookById(result.recordset[0].id);
 }
 

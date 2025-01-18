@@ -88,5 +88,6 @@ module.exports = {
     getUserById,
     updateUser,
     deleteUser,
+    searchUsers,
     getUsersWithBooks,
 };

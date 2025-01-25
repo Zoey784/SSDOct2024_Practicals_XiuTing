@@ -1,5 +1,5 @@
-const sql = require("mssql");
-const dbConfig = require("../dbConfig");
+const mssql = require("mssql");
+const config = require("../dbConfig");
 
 class User {
     constructor(id, username, email) {
@@ -100,7 +100,7 @@ class User {
     }
 
     static async searchUsers(searchTerm) {
-        const connection = await sql.connect(dbConfig);
+        const connection = await mssql.connect(config);
     
         try {
           const query = `
@@ -120,7 +120,7 @@ class User {
       }
 
       static async getUsersWithBooks() {
-        const connection = await sql.connect(dbConfig);
+        const connection = await mssql.connect(config);
     
         try {
           const query = `

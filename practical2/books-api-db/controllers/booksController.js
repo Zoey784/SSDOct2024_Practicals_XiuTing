@@ -64,6 +64,7 @@ const deleteBook = async (req, res) => {
     res.status(204).send();
   } catch (error) {
     console.error(error);
+    console.error(error);
     res.status(500).send("Error deleting book");
   }
 };

@@ -26,13 +26,14 @@ app.delete("/books/:id", booksController.deleteBook); // DELETE for deleting boo
 
 // ... existing code for database connection and graceful shutdown
 
+app.get('/users', usersController.getAllUsers); // Route to get all users
 app.get("/users/search", usersController.searchUsers);
 app.get("/users/with-books", usersController.getUsersWithBooks);
 app.get('/users/:id', usersController.getUserById); // Route to get a user by ID
 app.put('/users/:id', usersController.updateUser); // Route to update a user by ID
 app.delete('/users/:id', usersController.deleteUser); // Route to delete a user by ID
 app.post('/users', usersController.createUser); // Route to create a new user
-app.get('/users', usersController.getAllUsers); // Route to get all users
+
 
 app.listen(port, async () => {
     // ... existing code
